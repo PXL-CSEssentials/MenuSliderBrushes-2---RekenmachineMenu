@@ -20,8 +20,8 @@ namespace MenuSliderBrushes_2___RekenmachineMenu
     /// </summary>
     public partial class MainWindow : Window
     {
-        private float FirstNumber = 0.0f;
-        private float SecondNumber = 0.0f;
+        private float _firstNumber = 0.0f;
+        private float _secondNumber = 0.0f;
 
         public MainWindow()
         {
@@ -30,8 +30,8 @@ namespace MenuSliderBrushes_2___RekenmachineMenu
 
         private void ReadNumbers(string firstNumberText, string secondNumberText)
         {
-            FirstNumber = float.Parse(firstNumberText);
-            SecondNumber = float.Parse(secondNumberText);
+            _firstNumber = float.Parse(firstNumberText);
+            _secondNumber = float.Parse(secondNumberText);
         }
 
         // char is een karakter (letter, symbool, cijfer,...)
@@ -40,13 +40,13 @@ namespace MenuSliderBrushes_2___RekenmachineMenu
             switch (sign)
             {
                 case '+':
-                    return FirstNumber + SecondNumber;
+                    return _firstNumber + _secondNumber;
                 case '-':
-                    return FirstNumber - SecondNumber;
+                    return _firstNumber - _secondNumber;
                 case '*':
-                    return FirstNumber * SecondNumber;
+                    return _firstNumber * _secondNumber;
                 case '/':
-                    return FirstNumber / SecondNumber;
+                    return _firstNumber / _secondNumber;
                 default:
                     // Functie method moet altijd een resultaat returnen!
                     return 0.0f;
